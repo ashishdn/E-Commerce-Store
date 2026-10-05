@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-export default function FeaturedProducts({ productData }) {
+export default function FeaturedProducts({ products }) {
   // const products = productData
-  console.log(productData);
   return (
     <div className="container mx-auto px-4 py-20">
       <div className="text-center max-w-2xl mx-auto  mb-8 px-4">
@@ -16,7 +16,7 @@ export default function FeaturedProducts({ productData }) {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-        {productData.map((product) => (
+        {products.map((product) => (
           <div
             key={product.id}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col"
@@ -68,9 +68,11 @@ export default function FeaturedProducts({ productData }) {
               </div>
 
               {/* Add to Cart Button */}
+              <Link href={`/products/${product.id}`}>
               <button className="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2.5 px-4 rounded-lg transition-colors duration-200">
                 See Details
               </button>
+              </Link>
             </div>
           </div>
         ))}
