@@ -68,7 +68,7 @@ export default function FeaturedProducts({ products }) {
               </div>
 
               {/* Add to Cart Button */}
-              <Link href={`/products/${product.id}`}>
+              <Link href={`/product/${product.id}`}>
               <button className="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2.5 px-4 rounded-lg transition-colors duration-200">
                 See Details
               </button>
