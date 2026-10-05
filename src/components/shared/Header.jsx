@@ -16,18 +16,18 @@ export default function Header() {
         {/* Column 2: Menu Items */}
         <nav className="hidden sm:flex items-center gap-8 text-gray-600 font-medium">
           <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-          <Link href="#products" className="hover:text-blue-600 transition-colors">Products</Link>
-          <Link href="#about" className="hover:text-blue-600 transition-colors">About</Link>
-          <Link href="#contact" className="hover:text-blue-600 transition-colors">Contact</Link>
+          <Link href="/product" className="hover:text-blue-600 transition-colors">Product</Link>
+          <Link href="/about" className="hover:text-blue-600 transition-colors">About</Link>
+          <Link href="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
         </nav>
 
         {/* Column 3: Button */}
         <div>
           <Link 
-            href="/cart" 
+            href="/login" 
             className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-semibold transition-colors shadow-sm"
           >
-            Cart (0)
+            Login
           </Link>
         </div>
 
