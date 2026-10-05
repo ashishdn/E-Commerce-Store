@@ -1,8 +1,10 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function FeaturedProducts({ products }) {
+  const productData = products.slice(0, 6);
   // const products = productData
   return (
     <div className="container mx-auto px-4 py-20">
@@ -16,7 +18,7 @@ export default function FeaturedProducts({ products }) {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-        {products.map((product) => (
+        {productData.map((product) => (
           <div
             key={product.id}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col"
